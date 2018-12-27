@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { SocialIcon } from 'react-social-icons';
@@ -6,13 +5,13 @@ import { SocialIcon } from 'react-social-icons';
 import 'semantic-ui-css/semantic.min.css';
 
 const Container = styled.div`
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.5rem;
 `;
 
-const HeaderContainer = styled.div`
+const IconsContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.5rem 1rem;
   text-align: center;
 `;
 
@@ -21,26 +20,20 @@ const IconLink = styled(SocialIcon)`
   width: 20;
   height: 20;
   margin: 0 10px;
+  
+  :hover g.social-svg-mask {
+    fill: #1ca086 !important;
+  }
 `;
 
-const Header = ({ siteTitle }) => (
+const Social = () => (
   <Container>
-    <HeaderContainer>
-      <div>
-        <IconLink url='https://github.com/celineben' color='#282B2E' style={{ height: 40, width: 40 }}/>
-        <IconLink url='https://twitter.com/celine_bsn' color='#282B2E' style={{ height: 40, width: 40 }}/>
-        <IconLink url='https://www.linkedin.com/in/celinebensoussan' color='#282B2E' style={{ height: 40, width: 40 }}/>
-      </div>
-    </HeaderContainer>
+    <IconsContainer>
+      <IconLink url='https://github.com/celineben' color='#282B2E' style={{ height: 40, width: 40 }}/>
+      <IconLink url='https://twitter.com/celine_bsn' color='#282B2E' style={{ height: 40, width: 40 }}/>
+      <IconLink url='https://www.linkedin.com/in/celinebensoussan' color='#282B2E' style={{ height: 40, width: 40 }}/>
+    </IconsContainer>
   </Container>
 );
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
-
-export default Header;
+export default Social;

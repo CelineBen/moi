@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import Header from './header'
-// import './layout.css'
+import Social from './header'
+import Menu from './menu'
 
 const Body = styled.div`
   margin: 0 auto;
@@ -33,7 +33,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Menu/>
+        <Social siteTitle={data.site.siteMetadata.title} />
         <Body>{children}</Body>
         <Footer>
           © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
