@@ -1,21 +1,19 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Container, Header } from 'semantic-ui-react';
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import 'semantic-ui-css/semantic.min.css';
+
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Container text>
+      <Header>Bio</Header>
+      <p>Céline is a web developer who holds her Masters in Computer Science from McGill University. After graduating, she joined a Montreal startup and played a key role as they scaled up and got acquired. She has built web applications using Polymer and React and is well versed in developing APIs. On top of being a developer, she has been involved in the women in tech community, mentoring for Canada Learning Code and Technovation Montréal.</p>
+    </Container>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
