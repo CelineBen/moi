@@ -9,9 +9,7 @@ const MenuContainer = styled.div`
 
 const MenuItem = styled(Link)`
   font-size: 1rem;
-  display: inline-block;
   background-image: none;
-  text-decoration: none;
   color: inherit;
   cursor: pointer;
   
