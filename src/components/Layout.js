@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Social from './Social'
-import Menu from './menu'
+import Menu from './Menu'
 
 const Body = styled.div`
   margin: 0 auto;
