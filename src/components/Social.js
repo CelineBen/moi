@@ -22,7 +22,7 @@ const IconLink = styled(SocialIcon)`
   margin: 0 10px;
   
   :hover g.social-svg-mask {
-    fill: #1ca086 !important;
+    fill: #1ca086 !important; //#49bf9d
   }
 `;
 

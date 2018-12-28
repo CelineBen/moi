@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import Social from './header'
+import Social from './Social'
 import Menu from './menu'
 
 const Body = styled.div`

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 
 const Gallery = () => (
   <Layout>
-    <SEO title="Gallery" />
+    <Seo title="Gallery" />
     <Container text>
       <Header>Gallery</Header>
       <p>Photos coming soon</p>
