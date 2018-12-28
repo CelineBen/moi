@@ -2,17 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Grid } from 'semantic-ui-react';
 
 import Social from './Social'
-import Menu from './Menu'
-
-const Body = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
-  color: #33333D;
-`;
+import Menu from './Menu';
 
 const Footer = styled.footer`
   text-align: center;
@@ -33,9 +26,19 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Menu/>
-        <Social siteTitle={data.site.siteMetadata.title} />
-        <Body>{children}</Body>
+        <Grid centered>
+          <Grid.Row columns={1}>
+            <Menu/>
+          </Grid.Row>
+          <Grid.Row columns={1}>
+            <Social siteTitle={data.site.siteMetadata.title} />
+          </Grid.Row>
+          <Grid.Row columns={1}>
+            <Grid.Column computer={8} tablet={10} mobile={12}>
+              {children}
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
         <Footer>
           © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
